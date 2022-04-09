@@ -1,6 +1,6 @@
 ## TEMEDICA DRUG INFORMATION APP
 
-An app that enables users plan their movies schedule using the IMDB API
+An app that provides users with information on drugs.
 
 ### Installation
 
