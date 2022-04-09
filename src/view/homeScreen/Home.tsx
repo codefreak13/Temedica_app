@@ -4,9 +4,10 @@ import debounce from 'lodash.debounce';
 import styled from 'styled-components/native'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
-import data_set from '../../data/dataset.json'
-import ListItem, { Text, View, IProps } from './HomeItem';
+import dataSet from '../../data/dataset.json'
+import ListItem, { Text, View } from './HomeItem';
 import { colors } from './../../colors'
+import logo from '../../assets/images/logo.png'
 
 const Touchable = styled.TouchableOpacity``
 
@@ -45,16 +46,22 @@ font-size: 20px
 const ListWrapper = styled(View)`
 flex:1;
 `
-const logo = require('../../assets/images/logo.png')
+type HomeProps = {
+    id: string,
+    name: string,
+    diseases: Array<string>,
+    description: string,
+    released: string
+}
 
 const Home = () => {
-    const [value, setvalue] = useState('');
-    const [data, setdata] = useState<IProps[]>([]);
+    const [value, setvalue] = useState<string>('');
+    const [data, setdata] = useState<HomeProps[]>([]);
 
     const fetchData = async (searchText: string) => {
         const matcher = new RegExp(searchText, 'ig');
 
-        const selectedData = data_set?.drugs?.filter((item) => {
+        const selectedData = dataSet?.drugs?.filter((item) => {
             const { name, diseases } = item;
 
             return (matcher.test(name) && searchText !== '') || diseases.filter((disease) => matcher.test(disease)).length
@@ -99,7 +106,7 @@ const Home = () => {
                     <ShowText>Showing {data.length} result(s)</ShowText>)}
                 <FlatList
                     data={data}
-                    keyExtractor={(item: IProps) => item.id}
+                    keyExtractor={(item: HomeProps) => item.id}
                     renderItem={({ item }) => <ListItem {...item} />}
                     showsVerticalScrollIndicator={false}
                     ListEmptyComponent={<EmptyText>No Drugs</EmptyText>}

@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeItem component renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "borderColor": "#B4B4B4",
+        "borderRadius": 3,
+        "borderWidth": 1,
+        "marginVertical": 10,
+        "paddingBottom": 10,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "width": "80%",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#000",
+              "fontWeight": "bold",
+            },
+          ]
+        }
+      >
+        Panadol
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#000",
+              "fontSize": 12,
+            },
+          ]
+        }
+      >
+        malaria, 'fever
+      </Text>
+    </View>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontWeight": "bold",
+          },
+        ]
+      }
+    >
+      10/10/1995
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F1F1F1",
+          "marginTop": 10,
+          "paddingBottom": 10,
+          "paddingLeft": 10,
+          "paddingRight": 10,
+          "paddingTop": 10,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#000",
+          },
+        ]
+      }
+    >
+      relieves headache
+    </Text>
+  </View>
+</View>
+`;

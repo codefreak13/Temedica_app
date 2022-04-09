@@ -34,15 +34,14 @@ padding: 10px;
 margin-top: 10px;
 `
 
-export interface IProps {
-    id: string,
+ type ListItemProps = {
     name: string,
     diseases: Array<string>,
     description: string,
     released: string
 }
 
-const ListItem: FC<IProps> = ({ name, diseases, description, released }) => {
+const ListItem: FC<ListItemProps> = ({ name, diseases, description, released }) => {
     const formatDate = moment(released).format("DD/MM/YYYY")
     return (
         <Wrapper>
