@@ -21,8 +21,10 @@ exports[`HomeItem component renders correctly 1`] = `
     style={
       Array [
         Object {
+          "alignSelf": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
+          "width": "100%",
         },
       ]
     }
@@ -31,7 +33,7 @@ exports[`HomeItem component renders correctly 1`] = `
       style={
         Array [
           Object {
-            "width": "80%",
+            "maxWidth": "80%",
           },
         ]
       }
@@ -45,6 +47,7 @@ exports[`HomeItem component renders correctly 1`] = `
             },
           ]
         }
+        testID="itemName"
       >
         Panadol
       </Text>

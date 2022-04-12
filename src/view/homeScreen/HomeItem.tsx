@@ -9,7 +9,7 @@ color: ${colors.BLACK};
 export const View = styled.View``
 
 const TinyText = styled(Text)`
-font-size: 12px
+font-size: 12px;
 `
 const BoldText = styled(Text)`
 font-weight: bold
@@ -19,19 +19,21 @@ margin-vertical: 10px;
 borderWidth: 1px;
 borderColor: ${colors.GREY};
 borderRadius: 3px;
-padding:10px
+padding: 10px;
 `
 const MainWrapper = styled(View)`
 flex-direction: row;
-justify-content: space-between
+justify-content: space-between;
+width: 100%;
+align-self: center
 `
 const ItemWrapper = styled(View)`
-width: 80%
+max-width: 80%
 `
 const DescriptionView = styled(View)`
 background-color: ${colors.DARK_GREY};
 padding: 10px;
-margin-top: 10px;
+margin-top:10px
 `
 
  type ListItemProps = {
@@ -47,7 +49,7 @@ const ListItem: FC<ListItemProps> = ({ name, diseases, description, released }) 
         <Wrapper>
             <MainWrapper>
                 <ItemWrapper>
-                    <BoldText>{name}</BoldText>
+                    <BoldText testID="itemName">{name}</BoldText>
                     <TinyText>
                         {diseases && diseases.join(', ')}
                     </TinyText>
@@ -60,6 +62,5 @@ const ListItem: FC<ListItemProps> = ({ name, diseases, description, released }) 
         </Wrapper>
     )
 };
-
 
 export default ListItem;

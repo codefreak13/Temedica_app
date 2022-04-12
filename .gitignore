@@ -29,7 +29,7 @@ build/
 local.properties
 *.iml
 *.hprof
-
+artifacts
 # node.js
 #
 node_modules/
